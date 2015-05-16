@@ -5,7 +5,7 @@ All the prereqs to run vuze in a container accessed via a VNC
 
 The container creates a user called vnc as UID 1999. Create a matching user on your host system and give it access to your vuze / downloads directory:
 
-	useradd -u 1999 -g 1999 -m -s /bin/false -d /dev/null vuze
+	useradd -u 1999 -U -m -s /bin/false -d /dev/null vuze
 	chown -R vuze vuze
 	chown -R vuze downloads
 or enable ACLs and:
