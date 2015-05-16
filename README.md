@@ -8,7 +8,9 @@ The container creates a user called vnc as UID 1999. Create a matching user on y
 	useradd -u 1999 -U -m -s /bin/false -d /dev/null vuze
 	chown -R vuze vuze
 	chown -R vuze downloads
+
 or enable ACLs and:
+
 	setfacl -R -m u:vuze:rwx
 
 Run
