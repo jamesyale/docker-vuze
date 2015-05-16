@@ -15,4 +15,5 @@ You may also want to mount other directories for downloads from elsewhere on the
 	-v /incoming/downloads:/vnc/downloads \
 	-v /incoming/partial:/vnc/partial \
 	-v /incoming/torrents:/vnc/torrents \
+	-p 5900:5900 \
 	jamesyale/docker-vuze
