@@ -9,10 +9,10 @@ Mount your vuze directory in from the host using -v to keep all the configuratio
 
 You may also want to mount other directories for downloads from elsewhere on the file system: 
 
-docker run -d --name vuze \
--e "passwd=moomoo" \
--v /home/jim/vuze:/vnc/vuze \
--v /incoming/downloads:/vnc/downloads \
--v /incoming/partial:/vnc/partial \
--v /incoming/torrents:/vnc/torrents \
-jamesyale/docker-vuze
+	docker run -d --name vuze \
+	-e "passwd=moomoo" \
+	-v /home/jim/vuze:/vnc/vuze \
+	-v /incoming/downloads:/vnc/downloads \
+	-v /incoming/partial:/vnc/partial \
+	-v /incoming/torrents:/vnc/torrents \
+	jamesyale/docker-vuze
