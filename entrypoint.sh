@@ -15,7 +15,6 @@ export USER="vnc"
 /bin/chmod +x ~/.vnc/xstartup
 /bin/chmod 600 ~/.vnc/passwd
 
-#/usr/bin/x11vnc -forever -create -passwd $vncpasswd 
 /usr/bin/tightvncserver :0 -rfbauth ~/.vnc/passwd
 
 /usr/bin/tail -f ~/.vnc/$(/bin/hostname):0.log
