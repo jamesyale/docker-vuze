@@ -6,6 +6,7 @@ All the prereqs to run vuze in a container accessed via a VNC
 The container creates a user called vnc as UID 1999. Create a matching user on your host system and give it access to your vuze / downloads directory:
 
 	useradd -u 1999 -U -m -s /bin/false -d /dev/null vuze
+	mkdir vuze/.azureus # config directory
 	chown -R vuze vuze
 	chown -R vuze downloads
 
@@ -22,6 +23,7 @@ You may also want to mount other directories for downloads from elsewhere on the
 	docker run -d --name vuze \
 	-e "passwd=moomoo" \
 	-v /home/jim/vuze:/vnc/vuze \
+	-v /home/jim/vuze/.azureus:/vnc/.azureus \
 	-v /incoming/downloads:/vnc/downloads \
 	-v /incoming/partial:/vnc/partial \
 	-v /incoming/torrents:/vnc/torrents \
