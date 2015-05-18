@@ -1,6 +1,12 @@
 FROM java:7
 
-RUN apt-get update ; apt-get -y install x11vnc xvfb vnc4server tightvncserver libswt-gnome-gtk-3-jni ratpoison
+RUN apt-get update ; \
+  apt-get -y install xvfb \
+    vnc4server \
+    tightvncserver \
+    libswt-gnome-gtk-3-jni \
+    ratpoison ; \
+  apt-get clean
 
 RUN useradd -u 1999 -U -m -d /vnc vnc
 
@@ -8,6 +14,6 @@ COPY entrypoint.sh /vnc/entrypoint.sh
 
 USER vnc
 
-CMD [ "/usr/bin/x11vnc", "--help" ]
+CMD [ "/usr/bin/tightvncserver", "--help" ]
 
 ENTRYPOINT [ "/bin/bash", "/vnc/entrypoint.sh" ]
