@@ -3,6 +3,7 @@
 export USER="vnc"
 
 /bin/rm /tmp/.X*-lock
+/bin/rm /tmp/.X11-unix
 
 /bin/mkdir ~/.vnc
 
