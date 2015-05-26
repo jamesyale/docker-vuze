@@ -2,6 +2,8 @@
 
 export USER="vnc"
 
+/bin/rm /tmp/.X*-lock
+
 /bin/mkdir ~/.vnc
 
 /bin/echo "Setting password $passwd"
