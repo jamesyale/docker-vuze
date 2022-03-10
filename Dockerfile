@@ -1,7 +1,9 @@
 FROM java:7
 
 RUN apt-get update ; \
-  apt-get -y install xvfb \
+  apt-get -y install \
+    autocutsel \
+    xvfb \
     vnc4server \
     tightvncserver \
     libswt-gnome-gtk-3-jni \

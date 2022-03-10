@@ -13,6 +13,7 @@ export USER="vnc"
 
 /bin/echo "xterm &" > ~/.vnc/xstartup
 /bin/echo "/vnc/vuze/vuze &" >> ~/.vnc/xstartup
+/bin/echo "/usr/bin/autocutsel -fork &" >> ~/.vnc/xstartup
 /bin/echo "/usr/bin/ratpoison &" >> ~/.vnc/xstartup
 
 /bin/chmod +x ~/.vnc/xstartup
